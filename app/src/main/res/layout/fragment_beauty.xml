@@ -1,0 +1,169 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+
+            <ExpandableListView
+                android:id="@+id/expandblelistview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@color/white"
+
+                android:childDivider="@color/white"
+                android:divider="#e2e2e2"
+                android:dividerHeight="0dp"
+                android:groupIndicator="@null"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:id="@+id/linear_mehndi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="17dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="17dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:text="Mehndi Artist"
+                    android:textColor="@color/walkthrough_txt" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:id="@+id/arrow"
+                    android:rotation="270"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/ic_down_arrow5" />
+            </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f5f7f8"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_color"
+            android:text="Why Rapid?"
+            android:textSize="21.7sp"
+            android:fontFamily="@font/roboto_italic"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/mehendi_artists" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_senior_beautician"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verified Senior Beautician."
+                android:textColor="@color/walkthrough_txt"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/roboto_regular"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_carry_item"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We Carry All The Required Items. "
+                android:textColor="@color/walkthrough_txt"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/roboto_regular"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_hygiene"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Most Focus On Hygiene."
+                android:textColor="@color/walkthrough_txt"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/roboto_regular"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

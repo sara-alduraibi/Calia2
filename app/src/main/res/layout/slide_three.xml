@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/slide_3">
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="17dp"
+        android:src="@drawable/stick_man" />
+
+
+    <TextView
+        android:id="@+id/tv_txt_slide1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amiri_bold"
+        android:gravity="center"
+        android:text="كاليا تفهمك"
+        android:textColor="@color/txt_color"
+        android:textSize="20.5sp" />
+
+    <TextView
+        android:id="@+id/tv_subtxt_slide1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amiri_bold"
+        android:gravity="center"
+        android:text="بإمكانك التحدث معها باللغة السعودية العامية"
+        android:textColor="@color/white"
+        android:textSize="16.5sp"
+        android:layout_marginBottom="350dp"/>
+
+
+</LinearLayout>

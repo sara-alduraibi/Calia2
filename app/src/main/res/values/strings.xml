@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">كاليا</string>
+    <string name="calia">مساعدتك الشخصية</string>
+    <string name="skip">تخطى</string>
+    <string name="next">التالي</string>
+    <string name="start">يلا مشينا !</string>
+    <string name="slide_one">هي مساعدة صوتية باللغة العربية، لتحسين من تجربة التسوق </string>
+    <string name="_1_million_happy_customers">1 Million+ \nHappy Customers</string>
+    <string name="_1000_trusted_service_professionals">1000+ Trusted \nService Professionals</string>
+    <string name="we_have_send_4_digit_code_on_91_862734223">We have send 4 digit code \non +91 862734223</string>
+    <string name="you_are_in">أنت في</string>
+    <string name="home">الرئيسية</string>
+    <string name="who_are_we">من نحن؟ </string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="settings">الإعدادات</string>
+    <string name="test">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="policy1">١. استخدام الشتائم  </string>
+    <string name="privcy">١.هل سيتم حفط و تبادل أسئلتي مع جهات أخرى؟</string>
+    <string name="panswer">لا، صممت كاليا على عدم حفظ أي بيانات، فهي لا تعتمد على جمع بيانات أي شخص أو تبادلها أو بيعها. </string>
+    <string name="privcy2"> ٢.هل كاليا تستمع لنا طوال الوقت؟</string>
+    <string name="panswer2">لا، صممت كاليا للإستماع عند ضغط رز التسجيل فقط.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="beauty_amp_spa"><![CDATA[Beauty & Spa]]></string>
+    <string name="_15"><strike>$15</strike></string>
+    <string name="_30"><strike>$30</strike></string>
+    <string name="help">المساعدة الشخصية</string>
+
+</resources>

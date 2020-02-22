@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/slide_2">
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="17dp"
+        android:src="@drawable/shop"/>
+
+    <TextView
+        android:id="@+id/tv_txt_slide1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amiri_bold"
+        android:gravity="center"
+        android:text="دليلك الصوتي"
+        android:textColor="@color/txt_color"
+        android:textSize="20.5sp" />
+
+    <TextView
+        android:id="@+id/tv_subtxt_slide1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amiri_bold"
+        android:gravity="center"
+        android:text=" تصف لك المتجر أو المطعم الذي تبحث عنه في الرياض بارك"
+        android:textColor="@color/sub_txt"
+        android:textSize="16.5sp"
+        android:layout_marginBottom="350dp"/>
+
+</LinearLayout>

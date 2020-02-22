@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#141415</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transperent">#00000000</color>
+    <color name="txt_color">#38393f</color>
+    <color name="sub_txt">#8f909e</color>
+    <color name="active_color">#ffb969</color>
+    <color name="inactive_color">#ffdeb8</color>
+    <color name="walkthrough_txt">#5a5b65</color>
+    <color name="sky_blue">#80bbfd</color>
+    <color name="view_line">#e2e2e2</color>
+    <color name="tab_select_txt">#6786ff</color>
+    <color name="tab_unselect_txt">#8f909e</color>
+    <color name="tab_txt_color">#797a7b</color>
+    <color name="actionbar_color">#141415</color>
+    <color name="blue">#6685ff</color>
+    <color name="green">#54BD58</color>
+    <color name="gray">#717273</color>
+    <color name="inactive">#8f909e</color>
+    <color name="purple">#cca7d1</color>
+    <color name="dot1">#41719F</color>
+    <color name="dot2">#8dccfc</color>
+    <color name="dot3">#ffe0d5</color>
+    <color name="dot4">#fcf8f0</color>
+    <color name="dot5">#8c52ff</color>
+
+    <color name="roboto_calendar_background">#D6D6D6</color>
+    <color name="roboto_calendar_month_font">#38393f</color>
+    <color name="roboto_calendar_day_of_the_week_font">#161d20</color>
+    <color name="roboto_calendar_selected_day_font">#FFFFFF</color>
+    <color name="roboto_calendar_selected_day_background">#6685ff</color>
+    <color name="roboto_calendar_current_day_ring">#CCCCCC</color>
+    <color name="roboto_calendar_day_of_the_month_font">#4F4F4F</color>
+    <color name="cancel">#EB3737</color>
+    <color name="roboto_calendar_circle_2">#55c6da</color>
+    <color name="roboto_calendar_month_arrow">#55c6da</color>
+
+    <integer-array name="waveloader_colorsarray">
+        <item>@color/dot1</item>
+        <item>@color/dot2</item>
+        <item>@color/dot4</item>
+        <item>@color/dot3</item>
+        <item>@color/dot5</item>
+
+    </integer-array>
+
+</resources>

@@ -1,0 +1,19 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chat_bg"
+    tools:context="fragment.CategoryFragment">
+
+    <TextView
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/amiri_regular"
+        android:text="@string/test"
+        android:textAlignment="center"
+        android:textColor="@color/walkthrough_txt"
+        android:textSize="20sp" />
+
+</FrameLayout>
