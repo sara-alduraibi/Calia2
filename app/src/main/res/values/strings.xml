@@ -19,6 +19,8 @@
     <string name="panswer">لا، صممت كاليا على عدم حفظ أي بيانات، فهي لا تعتمد على جمع بيانات أي شخص أو تبادلها أو بيعها. </string>
     <string name="privcy2"> ٢.هل كاليا تستمع لنا طوال الوقت؟</string>
     <string name="panswer2">لا، صممت كاليا للإستماع عند ضغط رز التسجيل فقط.</string>
+    <string name="style">تغيير خامة الصوت</string>
+    <string name="gender">نوع المساعد</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

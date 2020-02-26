@@ -20,9 +20,9 @@
         </activity>
         <activity android:name=".WalkThroughActivity"></activity>
         <activity android:name=".HomePageActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".All_Services_Activity"/>
         <activity android:name=".WalkThroughActivity2"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".PolicyActivity"></activity>
 
     </application>
 

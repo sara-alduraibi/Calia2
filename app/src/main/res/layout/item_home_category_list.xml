@@ -17,7 +17,7 @@
         android:id="@+id/iv_start"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/sadrobot"
-        android:layout_marginLeft="120dp"/>
+        android:layout_marginLeft="120dp"
+        android:src="@drawable/sadrobot" />
 
 </LinearLayout>

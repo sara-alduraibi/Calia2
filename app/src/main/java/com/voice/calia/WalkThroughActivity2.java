@@ -70,7 +70,7 @@ public class WalkThroughActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(WalkThroughActivity2.this,HomePageActivity.class);
+                Intent intent = new Intent(WalkThroughActivity2.this,PolicyActivity.class);
                 startActivity(intent);
             }
         });
@@ -83,7 +83,7 @@ public class WalkThroughActivity2 extends AppCompatActivity {
 
                 }
                 else {
-                    Intent intent = new Intent(WalkThroughActivity2.this,HomePageActivity.class);
+                    Intent intent = new Intent(WalkThroughActivity2.this,PolicyActivity.class);
                     startActivity(intent);
                 }
             }

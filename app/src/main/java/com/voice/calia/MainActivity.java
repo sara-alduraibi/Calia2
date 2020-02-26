@@ -2,16 +2,14 @@ package com.voice.calia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -33,13 +31,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-import fragment.HomeFragment;
-
 public class MainActivity extends AppCompatActivity {
 
+    Intent intent;
     ImageButton iv_rec;
-    TextView tvSearchResult;
+    TextView tvSearchResult , tv_greetings;
     TextView tvQuestion;
+
     String currentType = "";
     TabLayout tabLayout;
     MainActivityPresenter mPresenter;
@@ -47,10 +45,21 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
+
+        tv_greetings = findViewById(R.id.tv_greetings);
+
+        mPresenter = new MainActivityPresenter();
+        mPresenter.initGCPTTSSettings();
+        mPresenter.initAndroidTTSSetting();
+        String greetings =  "مَرحباً، كيف يمكنني مُساعدتك؟";
+        mPresenter.startSpeak(greetings);
+        tv_greetings.setText(greetings);
+        tv_greetings.setVisibility(View.VISIBLE);
 
         /**
          *
@@ -68,39 +77,56 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
                 i.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
                 i.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "ar-SA");
-                i.putExtra(RecognizerIntent.EXTRA_PROMPT, "Say something");
+                i.putExtra(RecognizerIntent.EXTRA_PROMPT, "إسألني");
 
                 try {
                     startActivityForResult(i, 1000);
                 } catch (ActivityNotFoundException a) {
-                    Toast.makeText(MainActivity.this, "Your device doesn't support Speech Recognition", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "جهازك لا يدعم التطبيقات الصوتية", Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
 
-        backimg = findViewById(R.id.back_img);
-        backimg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (MainActivity.this, HomePageActivity.class);
-                startActivity(intent);
-                backimg.setVisibility(View.GONE);
-                backimg.setVisibility(View.VISIBLE);
-
-
-            }
-        });
+        /**
+         * here is ID Validation
+         *
+         *
+         */
 
         tvSearchResult = findViewById(R.id.tv_search_result);
-
         tvQuestion = findViewById(R.id.tv_question);
 
-        mPresenter = new MainActivityPresenter();
-        mPresenter.initGCPTTSSettings();
-        mPresenter.initAndroidTTSSetting();
+
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.navigation,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
+
+        int id = item.getItemId();
+        switch (id){
+            case R.id.home:
+                intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.aboutus:
+                intent = new Intent(MainActivity.this, PolicyActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.contactus:
+                Toast.makeText(getApplicationContext(),"Item 3 Selected",Toast.LENGTH_LONG).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -111,18 +137,32 @@ public class MainActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK && null != data) {
 
                 ArrayList<String> res = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-
                 String r = res.get(0);
-
                 tvQuestion.setText(r);
+                switch (r) {
+                    case "اهلين" :
+                        mPresenter.startSpeak("اهلين بك");
+                        tvQuestion.setText("اهلين بك");
+                        tvQuestion.setVisibility(View.VISIBLE);
+                        tvSearchResult.setText("مرحباً!");
+                        tvSearchResult.setVisibility(View.VISIBLE);
+                        break;
+                    case "مرحبا" :
+                        mPresenter.startSpeak("مرحباً بك");
+                        break;
 
-                callWebService(r);
+                    case "هلا" :
+                        mPresenter.startSpeak("أهلا و سهلا");
+                        break;
+                    case "هاي":
+                        mPresenter.startSpeak("أهلاً، لماذا لا نتحدث باللغة العربية ؟ ");
+                        default:callWebService(r);
+                }
 
 
             }
         }
     }
-
 
     private void callWebService(String text) {
 
@@ -263,6 +303,8 @@ public class MainActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+
         }
+
     }
 }

@@ -41,6 +41,9 @@ public class WalkThroughActivity extends AppCompatActivity {
 
         if (!prefManager.isFirstTimeLaunch()){
 
+                Intent intent = new Intent(WalkThroughActivity.this, PolicyActivity.class);
+                startActivity(intent);
+
         }
 
         setContentView(R.layout.activity_walk_through);
@@ -73,7 +76,7 @@ public class WalkThroughActivity extends AppCompatActivity {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
-                    Intent i = new Intent(WalkThroughActivity.this,HomePageActivity.class);
+                    Intent i = new Intent(WalkThroughActivity.this,PolicyActivity.class);
                     startActivity(i);
 
                 }
@@ -124,7 +127,7 @@ public class WalkThroughActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(WalkThroughActivity.this, HomePageActivity.class));
+        startActivity(new Intent(WalkThroughActivity.this, PolicyActivity.class));
         finish();
     }
 

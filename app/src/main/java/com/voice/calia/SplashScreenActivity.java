@@ -3,9 +3,11 @@ package com.voice.calia;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import Extra.PrefManager;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
+PrefManager prefManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

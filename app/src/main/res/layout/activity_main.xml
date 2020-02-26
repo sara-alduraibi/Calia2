@@ -4,27 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="10dp"
     android:background="@drawable/chat_bg">
 
-
-    <include
-        layout="@layout/toolbar_speech" />
-
-    <ImageButton
-        android:id="@+id/btn_record"
-        android:layout_width="141dp"
-        android:layout_height="90dp"
+    <TextView
+        android:id="@+id/tv_greetings"
+        android:layout_width="372dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_linear"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginStart="145dp"
-        android:layout_marginEnd="154dp"
-        android:layout_marginBottom="29dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_microphone" />
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="446dp"
+        android:background="@drawable/bg_greetings"
+        android:fontFamily="@font/amiri_bold"
+        android:padding="10dp"
+        android:text="سؤال"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/tv_question"
@@ -33,14 +32,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="right"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="545dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="436dp"
         android:background="@drawable/bg_question"
-        android:padding="15dp"
-        android:text="Question"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/amiri_bold"
+        android:padding="10dp"
+        android:text="سؤال"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         android:visibility="gone" />
 
     <TextView
@@ -50,14 +49,33 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="left"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="458dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="311dp"
         android:background="@drawable/bg_result"
-        android:padding="15dp"
-        android:text="Search Result"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/amiri_bold"
+        android:padding="10dp"
+        android:text="الجواب"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_linear"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageButton
+
+            android:id="@+id/btn_record"
+            android:layout_width="87dp"
+            android:layout_height="84dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_microphone" />
+    </LinearLayout>
 
 </RelativeLayout>
