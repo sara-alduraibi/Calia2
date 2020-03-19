@@ -28,5 +28,7 @@
     <string name="_15"><strike>$15</strike></string>
     <string name="_30"><strike>$30</strike></string>
     <string name="help">المساعدة الشخصية</string>
+    <string name="caliaassistant">:@CaliaAssistant</string>
+    <string name="contactus">تواصل معنا</string>
 
 </resources>

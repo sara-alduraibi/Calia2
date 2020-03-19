@@ -3,26 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:background="@drawable/chat_bg">
 
+    <ProgressBar
+        android:id="@+id/pg_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_linear"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="186dp"
+        android:layout_marginBottom="274dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/dot5"/>
+
     <TextView
         android:id="@+id/tv_greetings"
-        android:layout_width="372dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bottom_linear"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="446dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="427dp"
         android:background="@drawable/bg_greetings"
         android:fontFamily="@font/amiri_bold"
         android:padding="10dp"
-        android:text="سؤال"
+        android:text="ترحيب"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:visibility="gone" />
 
     <TextView
@@ -32,14 +43,71 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="right"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="436dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="454dp"
         android:background="@drawable/bg_question"
         android:fontFamily="@font/amiri_bold"
         android:padding="10dp"
         android:text="سؤال"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/et_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="454dp"
+        android:background="@drawable/bg_question"
+        android:fontFamily="@font/amiri_bold"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/btn_edit"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignBottom="@+id/tv_question"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="-20dp"
+        android:layout_toStartOf="@+id/tv_question"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/edit"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/btn_confirm"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_above="@+id/bottom_linear"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="307dp"
+        android:layout_toStartOf="@+id/btn_edit"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/confirm"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_above="@+id/bottom_linear"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="306dp"
+        android:layout_toStartOf="@+id/btn_edit"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cancel"
         android:visibility="gone" />
 
     <TextView
@@ -49,33 +117,83 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="left"
-        android:layout_marginStart="21dp"
-        android:layout_marginBottom="311dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="358dp"
         android:background="@drawable/bg_result"
         android:fontFamily="@font/amiri_bold"
         android:padding="10dp"
         android:text="الجواب"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:visibility="gone" />
 
     <LinearLayout
-        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@+id/bottom_linear"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="123dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/ib_go"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="45dp"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/location"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_map"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginStart="35dp"
+            android:fontFamily="@font/amiri_bold"
+            android:text="أرني الخريطة"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/bottom_linear"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <ImageButton
-
             android:id="@+id/btn_record"
-            android:layout_width="87dp"
-            android:layout_height="84dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_gravity="center_horizontal"
             android:background="@null"
+            android:backgroundTint="@null"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_microphone" />
+            android:src="@drawable/mic" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="100dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+    <ImageButton
+        android:id="@+id/imgbtn_trash"
+        android:layout_width="30dp"
+        android:layout_gravity="end"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/trash" />
     </LinearLayout>
 
 </RelativeLayout>

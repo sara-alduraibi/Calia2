@@ -61,14 +61,6 @@ public class HomePageActivity extends AppCompatActivity {
          * This function is not a main function, it is for the design layouts since we have a navigation bar
          *
          */
-        linear = findViewById(R.id.linear);
-        linear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomePageActivity.this, HomePageActivity.class);
-                startActivity(intent);
-            }
-        });
 
 
     }

@@ -26,7 +26,7 @@ public class WalkThroughActivity extends AppCompatActivity {
 
     PrefManager prefManager;
     TextView txtskip,txtnext;
-    LinearLayout dotsLayout;
+    LinearLayout  dotsLayout;
     ViewPager viewPager;
     private int[] layouts;
     MyViewPagerAdapter myViewPagerAdapter;

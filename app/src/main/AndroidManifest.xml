@@ -3,7 +3,6 @@
     package="com.voice.calia">
 <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,7 +21,15 @@
         <activity android:name=".HomePageActivity"></activity>
         <activity android:name=".WalkThroughActivity2"></activity>
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ImageLocation"
+            android:parentActivityName="com.voice.calia.MainActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.voice.calia.MainActivity" />
+        </activity>
         <activity android:name=".PolicyActivity"></activity>
+        <activity android:name=".ContactUsActivity"></activity>
 
     </application>
 
